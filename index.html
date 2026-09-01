@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Fuck You Money — $FUM</title>
+  <meta name="description" content="Buy this coin and have FUM just like Pablo. Rats ate 10%. He burned $2M for heat. Countdown to launch." />
+  <meta name="theme-color" content="#0b0a07" />
+  <meta property="og:title" content="Fuck You Money — $FUM" />
+  <meta property="og:description" content="Buy this coin and have FUM just like Pablo." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Mono:wght@400;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #0b0a07;
+      --paper: #16130c;
+      --gold: #e8c36a;
+      --gold-2: #f4e2a8;
+      --cash: #6fbf73;
+      --red: #c44536;
+      --ink: #f3ead4;
+      --muted: #9a8f72;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { background: var(--bg); color: var(--ink); min-height: 100%; }
+    body {
+      font-family: "IBM Plex Mono", ui-monospace, monospace;
+      overflow-x: hidden;
+      background:
+        radial-gradient(1200px 600px at 50% -10%, rgba(232,195,106,.12), transparent 60%),
+        radial-gradient(800px 400px at 80% 110%, rgba(196,69,54,.08), transparent 50%),
+        var(--bg);
+    }
+    body::before {
+      content: "";
+      position: fixed; inset: 0; pointer-events: none; opacity: .07;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='4'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    }
+    .wrap {
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 28px 18px 80px;
+      position: relative;
+      z-index: 1;
+    }
+    header {
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 12px; margin-bottom: 36px;
+    }
+    .brand {
+      letter-spacing: .22em;
+      font-size: 11px;
+      color: var(--gold);
+      text-transform: uppercase;
+    }
+    .chip {
+      border: 1px solid rgba(232,195,106,.35);
+      color: var(--gold-2);
+      padding: 6px 10px;
+      font-size: 11px;
+      letter-spacing: .08em;
+    }
+    h1 {
+      font-family: "Bebas Neue", Impact, sans-serif;
+      font-size: clamp(64px, 16vw, 148px);
+      line-height: .82;
+      letter-spacing: .02em;
+      color: var(--gold-2);
+      text-shadow: 0 0 40px rgba(232,195,106,.18);
+    }
+    h1 span { display: block; color: var(--ink); }
+    .slogan {
+      font-family: "Instrument Serif", Georgia, serif;
+      font-style: italic;
+      font-size: clamp(20px, 4vw, 30px);
+      margin: 14px 0 34px;
+      color: #efe4c4;
+    }
+    .clock-label {
+      font-size: 11px;
+      letter-spacing: .28em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 12px;
+    }
+    .clock {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      margin-bottom: 28px;
+    }
+    .unit {
+      background: linear-gradient(180deg, #1d1910, #120f0a);
+      border: 1px solid rgba(232,195,106,.28);
+      padding: 16px 6px 12px;
+      text-align: center;
+    }
+    .unit b {
+      display: block;
+      font-family: "Bebas Neue", Impact, sans-serif;
+      font-size: clamp(36px, 9vw, 72px);
+      line-height: 1;
+      color: var(--gold);
+    }
+    .unit i {
+      font-style: normal;
+      font-size: 10px;
+      letter-spacing: .2em;
+      color: var(--muted);
+    }
+    .live {
+      display: none;
+      background: #122015;
+      border: 1px solid var(--cash);
+      color: var(--cash);
+      padding: 18px;
+      text-align: center;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      margin-bottom: 28px;
+    }
+    .live a { color: var(--gold-2); }
+    .facts {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+      margin: 8px 0 28px;
+    }
+    @media (min-width: 700px) {
+      .facts { grid-template-columns: 1fr 1fr; }
+    }
+    .fact {
+      background: var(--paper);
+      border-left: 3px solid var(--gold);
+      padding: 16px 16px 14px;
+    }
+    .fact strong { display: block; color: var(--gold); font-size: 13px; margin-bottom: 6px; letter-spacing: .06em; }
+    .fact p { color: #d8cdb0; font-size: 13px; line-height: 1.5; }
+    .cta-row { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 22px; }
+    a.btn {
+      display: inline-block;
+      text-decoration: none;
+      background: var(--gold);
+      color: #1a1408;
+      font-weight: 600;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      font-size: 12px;
+      padding: 14px 18px;
+    }
+    a.btn.ghost {
+      background: transparent;
+      color: var(--gold-2);
+      border: 1px solid rgba(232,195,106,.4);
+    }
+    .ca {
+      font-size: 12px;
+      color: var(--muted);
+      word-break: break-all;
+    }
+    .ca button {
+      margin-left: 8px;
+      background: transparent;
+      border: 1px solid rgba(232,195,106,.35);
+      color: var(--gold);
+      padding: 4px 8px;
+      cursor: pointer;
+      font-family: inherit;
+    }
+    footer {
+      margin-top: 48px;
+      font-size: 11px;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">Solana · pump.fun</div>
+      <div class="chip">$FUM</div>
+    </header>
+
+    <h1>FUCK YOU <span>MONEY</span></h1>
+    <p class="slogan">Buy this coin and have FUM just like Pablo.</p>
+
+    <div class="clock-label" id="clockLabel">Launch countdown</div>
+    <div class="clock" id="clock" aria-live="polite">
+      <div class="unit"><b id="d">00</b><i>Days</i></div>
+      <div class="unit"><b id="h">00</b><i>Hours</i></div>
+      <div class="unit"><b id="m">00</b><i>Mins</i></div>
+      <div class="unit"><b id="s">00</b><i>Secs</i></div>
+    </div>
+    <div class="live" id="live">Live. Rats already circling. <a id="liveLink" href="#" target="_blank" rel="noopener">Open on pump.fun</a></div>
+
+    <div class="cta-row">
+      <a class="btn" id="xLink" href="https://x.com/dubaiguynate" target="_blank" rel="noopener">Follow on X</a>
+      <a class="btn ghost" id="tgLink" href="#" target="_blank" rel="noopener">Telegram</a>
+    </div>
+    <p class="ca">CA: <span id="ca">dropping at launch</span><button type="button" id="copy">copy</button></p>
+
+    <div class="facts">
+      <div class="fact">
+        <strong>10% written off</strong>
+        <p>Brother Roberto said they wrote off about a tenth of the cash every year. Rats. Water. Rot. That’s a storage problem, not a portfolio.</p>
+      </div>
+      <div class="fact">
+        <strong>$2,500 / month on rubber bands</strong>
+        <p>Not on cars. Not on planes. On elastic. Because the money arrived faster than anyone could stack it.</p>
+      </div>
+      <div class="fact">
+        <strong>Burned $2 million for heat</strong>
+        <p>On the run. Daughter cold. Notes went in the fire. Currency back to kindling. That’s Fuck You Money.</p>
+      </div>
+      <div class="fact">
+        <strong>$420 million a week</strong>
+        <p>Peak take, give or take the usual cartel rounding. Then the hippos at Hacienda Nápoles went feral and outlived the empire.</p>
+      </div>
+    </div>
+
+    <footer>
+      Not financial advice. A meme about having so much cash it becomes a liability.
+      Existing generic $FUM tokens are not this coin. Contract only from this page after launch.
+    </footer>
+  </div>
+
+  <script>
+    /* ===== EDIT THESE ===== */
+    const LAUNCH_ISO = "2026-09-04T20:00:00Z"; // Friday 4 Sep 2026, 20:00 UTC
+    const PUMP_URL   = "";                      // paste pump.fun coin URL after launch
+    const CA         = "";                      // paste contract after launch
+    const TELEGRAM   = "";                      // optional t.me link
+    /* ====================== */
+
+    const params = new URLSearchParams(location.search);
+    const target = new Date(params.get("t") || LAUNCH_ISO);
+
+    const $ = (id) => document.getElementById(id);
+    const pad = (n) => String(n).padStart(2, "0");
+
+    if (TELEGRAM) $("tgLink").href = TELEGRAM;
+    else $("tgLink").style.display = "none";
+
+    function setLive() {
+      $("clock").style.display = "none";
+      $("clockLabel").textContent = "It's live";
+      $("live").style.display = "block";
+      if (PUMP_URL) $("liveLink").href = PUMP_URL;
+      if (CA) $("ca").textContent = CA;
+    }
+
+    function tick() {
+      const now = Date.now();
+      let diff = target.getTime() - now;
+      if (diff <= 0) { setLive(); return; }
+      const d = Math.floor(diff / 86400000); diff -= d * 86400000;
+      const h = Math.floor(diff / 3600000);  diff -= h * 3600000;
+      const m = Math.floor(diff / 60000);    diff -= m * 60000;
+      const s = Math.floor(diff / 1000);
+      $("d").textContent = pad(d);
+      $("h").textContent = pad(h);
+      $("m").textContent = pad(m);
+      $("s").textContent = pad(s);
+    }
+
+    $("copy").addEventListener("click", async () => {
+      const text = $("ca").textContent.trim();
+      if (!text || text === "dropping at launch") return;
+      try { await navigator.clipboard.writeText(text); $("copy").textContent = "copied"; }
+      catch { $("copy").textContent = "fail"; }
+      setTimeout(() => $("copy").textContent = "copy", 1400);
+    });
+
+    tick();
+    setInterval(tick, 1000);
+  </script>
+</body>
+</html>
